@@ -10,14 +10,14 @@ terraform {
 provider "google" {
   # Configuration options
   credentials = "./Terraform/Keys/my-creds.json"
-  project     = "terraform-intro-412309"
-  region      = "us-central1"
+  project     = var.project
+  region      = var.region
 }
 
 
 resource "google_storage_bucket" "terra-intro-bucket" {
-  name          = "terra-intro-bucket"
-  location      = "US"
+  name          = var.gcs_bucket_name
+  location      = var.location
   force_destroy = true
 
   lifecycle_rule {
@@ -40,5 +40,6 @@ resource "google_storage_bucket" "terra-intro-bucket" {
 }
 
 resource "google_bigquery_dataset" "terra_intro_dataset" {
-  dataset_id = "terra_intro_dataset"
+  dataset_id = var.bq_dataset_name
+  location   = var.location
 }
