@@ -31,5 +31,5 @@ variable "gcs_storage_class" {
 
 variable "gcs_bucket_name" {
   description = "My Storage Bucket Name"
-  default     = "terra_intro_bucket"
+  default     = "terra_hw_bucket"
 }
