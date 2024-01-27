@@ -38,3 +38,7 @@ resource "google_storage_bucket" "terra-intro-bucket" {
     }
   }
 }
+
+resource "google_bigquery_dataset" "terra_intro_dataset" {
+  dataset_id = "terra_intro_dataset"
+}
