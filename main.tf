@@ -9,7 +9,7 @@ terraform {
 
 provider "google" {
   # Configuration options
-  credentials = "./Terraform/Keys/my-creds.json"
+  credentials = file(var.credentials)
   project     = var.project
   region      = var.region
 }

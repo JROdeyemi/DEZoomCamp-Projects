@@ -3,6 +3,11 @@ variable "project" {
   default     = "terraform-intro-412309"
 }
 
+variable "credentials" {
+  description = "Google Cloud Auth & Credentials"
+  default     = "./Terraform/Keys/my-creds.json"
+}
+
 variable "region" {
   description = "Project region"
   default     = "us-central1"
